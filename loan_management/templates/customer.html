@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers Data</title>
+</head>
+<body>
+<table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Father Name</th>
+      <th scope="col">Customer Profile</th>
+      <th scope="col">Loan Account No</th>
+      <th scope="col">Zone Name</th>
+      <th scope="col">Region Name</th>
+      <th scope="col">Area Name</th>
+      <th scope="col">Branch Name</th>
+      <th scope="col">Branch Code</th>
+      <th scope="col">pincode</th>
+      <th scope="col">landmark</th>
+      <th scope="col">address1</th>
+      <th scope="col">address2</th>
+      <th scope="col">address3</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for customer in customers %}
+    <tr>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.father_name }}</td>
+      <td>{{ customer.customer_profile }}</td>
+      <td>{{ customer.loan_account_no }}</td>
+      <td>{{ customer.zone }}</td>
+      <td>{{ customer.region }}</td>
+      <td>{{ customer.area }}</td>
+      <td>{{ customer.branch_name }}</td>
+      <td>{{ customer.branch_code }}</td>
+      <td>{{ customer.pincode }}</td>
+      <td>{{ customer.landmark }}</td>
+      <td>{{ customer.address_1 }}</td>
+      <td>{{ customer.address_2 }}</td>
+      <td>{{ customer.address_3 }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</html>
