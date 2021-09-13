@@ -19,7 +19,7 @@ class UploadView(APIView):
 
         loan_utils.parse_excel(customer_serializer.validated_data.get("file"))
 
-        return loan_utils.create_response({"url": "http://localhost:8000/"}, 200)
+        return loan_utils.create_response({"data_url": "http://localhost:8000/"}, 200)
 
 
 class ShowCustomer(View):
